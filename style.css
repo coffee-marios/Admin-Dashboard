@@ -356,7 +356,13 @@ html {
 .header{
     grid-column: 2/3;
     background-color: burlywood;
-    text-align: center;
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
 }
 
 .content{
@@ -365,10 +371,28 @@ html {
     background-color: darkgrey;
 }
 
+
+
 ul>li{
   list-style: none;
 }
 
 ul>li>a{
   color: white;
+}
+
+.header-buttons{
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  
+  
+}
+
+.button-new{
+  justify-self: end;
+}
+
+.button-upload{
+  grid-column: 2/3;
+  justify-self: center;
 }

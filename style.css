@@ -390,7 +390,7 @@ body{
 .header{
     grid-column: 2/3;
     grid-row: 1/2;
-    background-color: burlywood;
+    background-color: rgb(239, 237, 234);
     line-height: 1;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -434,6 +434,16 @@ body{
   
 }
 
+.project-items{
+  display: grid;
+  grid-template-columns: 55px 55px 55px;
+  justify-content: end;
+  margin-top: 45px;
+}
+
+.project-icons{
+  justify-self: end;
+}
 
 .content-left{
   grid-column: 1/2;
@@ -480,6 +490,7 @@ body{
   text-align: justify;
   padding: 7px;
   border-left: 5px saddlebrown solid;
+  padding: 20px;
 }
 
 .trending{

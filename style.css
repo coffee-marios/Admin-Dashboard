@@ -360,17 +360,35 @@ body{
     padding-top: 8px;
 }
 
+.bar-dashboard{
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  justify-items: center;
+  
+}
+
+.dashboard-icon{
+  align-self: center;
+}
+
+.bar-title{
+  align-self: center;
+  justify-self: start;
+
+}
+
+
 .user-block{
   display: grid;
   grid-template-columns: 1fr 2fr;
   /* align-content: start;     */
   justify-items: center; 
-  column-gap: 10px;
+  column-gap: 20px;
 
 }
 .user-data{
   display: grid;
-  
+  gap: 14px;
   
 }
 

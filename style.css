@@ -570,7 +570,7 @@ body{
 .trending{
   display: grid;
   /* grid-template-rows: subgrid; */
-  gap: 5px;
+  gap: 35px;
   background-color: azure;
   padding: 20px;
 }

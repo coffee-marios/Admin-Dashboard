@@ -334,6 +334,12 @@ html {
 
 /* End reset */
 
+:root {
+  --content-bg-color: rgba(0, 255, 255, 0.795);
+  --header-bg-color: pink;
+
+}
+
 body{
   background-color: blue;
 }
@@ -404,19 +410,34 @@ body{
 }
 
 .header{
-    grid-column: 2/3;
+  grid-column: 2/3;
     grid-row: 1/2;
-    background-color: rgb(239, 237, 234);
+}
+
+.header-content{
+  background-color:var(--content-bg-color);
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+
+}
+
+.header-top{
+    background-color:var(--header-bg-color);
     line-height: 1;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50px 100px 1fr;
     
     justify-content: space-between;
-    align-items: center;
-    row-gap: 42px;
-    padding: 15px;
+    align-items: start;
+
+    padding-top: 15px;
+    padding-left: 20px;
     padding-right: 30px;
 }
+
 
 
 .header-search{
@@ -445,28 +466,15 @@ body{
   display: grid;
   grid-template-columns: repeat(3, 90px);
   justify-self: end;
-
+  
   
 }
 
-/* .button-new{
-  justify-self: end;
-}
-
-.button-upload{
-  justify-self: end;
-} */
 
 .button-share{
   justify-self: end;
   
 } 
-
-
-
-
-
-
 
 
 .header-notification{
@@ -479,8 +487,8 @@ body{
 
 .content{
     grid-column: 2/3;
-    grid-row: 2/8;
-    background-color:rgba(0, 255, 255, 0.795);
+    grid-row: 2/7;
+    background-color:var(--content-bg-color);
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: subgrid;
@@ -494,7 +502,8 @@ body{
   grid-column: 1/2;
 }
 .announcements-header{
-  grid-column: 2/3;
+  /* grid-column: 2/3; */
+  justify-self: end;
   max-height: 30px;
 }
 .projects-header, .announcements-header, .trending-header{
@@ -520,7 +529,7 @@ body{
 
 .content-left{
   grid-column: 1/2;
-  grid-row: 2/5;
+  grid-row: 1/8;
   display: grid;
   grid-template-rows: subgrid;
   /* background-color: rgb(25, 24, 24); */
@@ -529,7 +538,7 @@ body{
 
 .content-right{
   grid-column: 2/3;
-  grid-row: 2/5;
+  grid-row: 1/8;
   /* background-color: red; */
   /* grid-template-rows: subgrid; */
   display:grid;

@@ -334,14 +334,29 @@ html {
 
 /* End reset */
 
+
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url('fonts/roboto-regular-webfont.woff2') format('woff2'),
+       url('fonts/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 :root {
-  --content-bg-color: rgba(0, 255, 255, 0.795);
-  --header-bg-color: pink;
+  --content-bg-color: #e0e7ff;
+  --header-bg-color: #eff6ff;
+  --text-bg-color: #ecfeff;
 
 }
 
 body{
   background-color: blue;
+  font-family: 'robotoregular', 'Courier New', Courier, monospace;
+  
+  
 }
 
 .wrapper{
@@ -355,7 +370,7 @@ body{
     grid-column: 1/2;
     grid-row: 1/span 6;
     min-height: 100%;
-    background-color: rgb(57, 52, 211);
+    background-color: #2563eb;
     color: white;
     text-align: center;
     display: subgrid;
@@ -376,6 +391,7 @@ body{
 .bar-title{
   align-self: center;
   justify-self: start;
+  font-size: 1.2rem;
 
 }
 
@@ -440,9 +456,9 @@ body{
 
 .header-search>form>div>input[type='search']{
   border-radius: 30px;
-  padding: 8px;
+  padding: 5px 12px;
   font-size: 0.9rem;
-  border: none;
+  border: 1px solid black;
   width: 50%;
 } 
 
@@ -522,8 +538,6 @@ body{
 .announcements-header{
   align-self: center;
   grid-row: 1/2;
-  /* padding: 8px; */
-
   
 }
 .projects-header, .announcements-header, .trending-header{
@@ -548,7 +562,6 @@ body{
 
 .content-left{
   grid-column: 1/2;
-  /* grid-row: 1/10; */
   display: grid;
   grid-template-rows: 52px 1fr;
 
@@ -557,7 +570,6 @@ body{
 
 .content-right{
   grid-column: 2/3;
-  /* grid-row: 1/10; */
   grid-template-rows: 52px 1fr 52px 1fr;
   display:grid;
   
@@ -569,7 +581,7 @@ body{
 }
 
 .announcements-blog{
-  background-color: azure;
+  background-color: var(--text-bg-color);
   padding: 12px;
 }
 .projects{
@@ -583,22 +595,22 @@ body{
   display: grid;
   grid-template-rows: subgrid;
   gap: 10px;
-  background-color: azure;
+  background-color:  var(--text-bg-color);
 }
 
 .project-blog{
-  background-color: white;
+  background-color:  var(--text-bg-color);
+  font-family: 'Courier New', Courier, monospace;
   text-align: justify;
-  border-left: 5px saddlebrown solid;
+  border-left: 5px #fde047 solid;
   padding: 20px;
 }
 
 .trending{
   display: grid;
   grid-template-rows: subgrid;
-  /* grid-row: 6/10; */
   gap: 35px;
-  background-color: azure;
+  background-color:  var(--text-bg-color);
   padding: 20px;
 }
 
@@ -626,6 +638,12 @@ body{
 a{
   color: white; 
 }
+
+a:hover{
+  color:#fde047;
+}
+
+
 
 button{
   border-radius: 20px;
